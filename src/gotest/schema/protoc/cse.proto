@@ -1,0 +1,23 @@
+syntax = "proto3";
+option java_multiple_files = true;
+option java_package = "io.grpc.examples.cse";
+option java_outer_classname = "cseProto";
+
+package cse;
+
+message CseInvokeRequest {
+string id = 1;
+string name = 2;
+string age = 3;
+string job = 4;
+int64 delaytime =5;
+int64 number =6;
+string version =7;
+}
+
+message CseInvokeReply {
+string instant_id = 1;
+string resMessage = 2;
+int64 number =3;
+string version =4;
+}

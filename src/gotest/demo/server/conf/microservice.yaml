@@ -1,0 +1,10 @@
+#APPLICATION_ID: go
+service_description:
+  name: GoServerHoy
+  version: 1.0.1
+  level: FRONT #或MIDDLE或BACK
+  properties: {
+    flag : a ,
+    delay : 0,
+    fail : FAILA
+  }

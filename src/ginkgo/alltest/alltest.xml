@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+  <testsuite tests="18" failures="0" time="300.6044922">
+      <testcase name="Alltest Loadbalance LB_REST PAAS.SIT.CSE.GOSDK.REST.loadbalance.01" classname="AllTestSuite" time="6.9697265"></testcase>
+      <testcase name="Alltest Loadbalance LB_REST PAAS.SIT.CSE.GOSDK.REST.loadbalance.02" classname="AllTestSuite" time="19.8408203"></testcase>
+      <testcase name="Alltest Loadbalance LB_REST PAAS.SIT.CSE.GOSDK.REST.loadbalance.03" classname="AllTestSuite" time="17.8134765"></testcase>
+      <testcase name="Alltest Loadbalance LB_REST PAAS.SIT.CSE.GOSDK.REST.loadbalance.04" classname="AllTestSuite" time="20.9414063"></testcase>
+      <testcase name="Alltest Loadbalance LB_REST PAAS.SIT.CSE.GOSDK.REST.loadbalance.05" classname="AllTestSuite" time="8.8876953"></testcase>
+      <testcase name="Alltest Loadbalance LB_REST PAAS.SIT.CSE.GOSDK.REST.loadbalance.06" classname="AllTestSuite" time="10.1064453"></testcase>
+      <testcase name="Alltest Loadbalance LB_REST PAAS.SIT.CSE.GOSDK.REST.loadbalance.07" classname="AllTestSuite" time="18.3740235"></testcase>
+      <testcase name="Alltest Loadbalance LB_REST PAAS.SIT.CSE.GOSDK.REST.loadbalance.08" classname="AllTestSuite" time="22.6796875"></testcase>
+      <testcase name="Alltest Loadbalance LB_REST PAAS.SIT.CSE.GOSDK.REST.loadbalance.09" classname="AllTestSuite" time="18.7675781"></testcase>
+      <testcase name="Alltest Loadbalance LB_REST PAAS.SIT.CSE.GOSDK.REST.loadbalance.10" classname="AllTestSuite" time="10.814453199999999"></testcase>
+      <testcase name="Alltest Loadbalance LB_REST PAAS.SIT.CSE.GOSDK.REST.loadbalance.11" classname="AllTestSuite" time="22.7080078"></testcase>
+      <testcase name="Alltest Loadbalance LB_REST PAAS.SIT.CSE.GOSDK.REST.loadbalance.12" classname="AllTestSuite" time="9.3652344"></testcase>
+      <testcase name="Alltest Loadbalance LB_HIGHWAY PAAS.SIT.CSE.GOSDK.HIGHWAY.loadbalance.01" classname="AllTestSuite" time="13.0927734"></testcase>
+      <testcase name="Alltest Loadbalance LB_HIGHWAY PAAS.SIT.CSE.GOSDK.HIGHWAY.loadbalance.02" classname="AllTestSuite" time="13.2597656"></testcase>
+      <testcase name="Alltest Loadbalance LB_HIGHWAY PAAS.SIT.CSE.GOSDK.HIGHWAY.loadbalance.03" classname="AllTestSuite" time="20.1650391"></testcase>
+      <testcase name="Alltest Loadbalance LB_HIGHWAY PAAS.SIT.CSE.GOSDK.HIGHWAY.loadbalance.04" classname="AllTestSuite" time="10.0136719"></testcase>
+      <testcase name="Alltest Loadbalance LB_HIGHWAY PAAS.SIT.CSE.GOSDK.HIGHWAY.loadbalance.05" classname="AllTestSuite" time="29.571289"></testcase>
+      <testcase name="Alltest Loadbalance LB_HIGHWAY PAAS.SIT.CSE.GOSDK.HIGHWAY.loadbalance.06" classname="AllTestSuite" time="24.2470703"></testcase>
+  </testsuite>

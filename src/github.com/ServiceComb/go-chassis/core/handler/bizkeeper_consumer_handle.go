@@ -1,0 +1,107 @@
+package handler
+
+import (
+	"fmt"
+	"net/http"
+	"strings"
+
+	"github.com/ServiceComb/go-chassis/client/rest"
+	"github.com/ServiceComb/go-chassis/core/common"
+	"github.com/ServiceComb/go-chassis/core/config"
+	"github.com/ServiceComb/go-chassis/core/invocation"
+	"github.com/ServiceComb/go-chassis/core/lager"
+	"github.com/ServiceComb/go-chassis/third_party/forked/afex/hystrix-go/hystrix"
+)
+
+// constant for bizkeeper-consumer
+const (
+	Name = "bizkeeper-consumer"
+)
+
+// BizKeeperConsumerHandler bizkeeper consumer handler
+type BizKeeperConsumerHandler struct{}
+
+// GetHystrixConfig get hystrix config
+func GetHystrixConfig(service, protype string) (string, hystrix.CommandConfig) {
+	command := protype
+	if service != "" {
+		command = strings.Join([]string{protype, service}, ".")
+	}
+	return command, hystrix.CommandConfig{
+		ForceFallback:          config.DefaultForceFallback,
+		TimeoutEnabled:         config.GetTimeoutEnabled(service, protype),
+		Timeout:                config.GetTimeout(command, protype),
+		MaxConcurrentRequests:  config.GetMaxConcurrentRequests(command, protype),
+		ErrorPercentThreshold:  config.GetErrorPercentThreshold(command, protype),
+		RequestVolumeThreshold: config.GetRequestVolumeThreshold(command, protype),
+		SleepWindow:            config.GetSleepWindow(command, protype),
+		ForceClose:             config.GetForceClose(service, protype),
+		ForceOpen:              config.GetForceOpen(service, protype),
+		CircuitBreakerEnabled:  config.GetCircuitBreakerEnabled(command, protype),
+	}
+}
+
+// Handle function is for to handle the chain
+func (bk *BizKeeperConsumerHandler) Handle(chain *Chain, i *invocation.Invocation, cb invocation.ResponseCallBack) {
+	command, cmdConfig := GetHystrixConfig(i.MicroServiceName, common.Consumer)
+	hystrix.ConfigureCommand(command, cmdConfig)
+
+	err := hystrix.Do(command, func() error {
+		var err error
+		chain.Next(i, func(resp *invocation.InvocationResponse) error {
+			err = cb(resp)
+			return err
+		})
+		return err
+	}, GetFallbackFun(command, common.Consumer, i, cb, cmdConfig.ForceFallback))
+	//if err is not nil, means fallback is nil, return original err
+	if err != nil {
+		writeErr(err, cb)
+	}
+}
+
+// GetFallbackFun get fallback function
+func GetFallbackFun(cmd, t string, i *invocation.Invocation, cb invocation.ResponseCallBack, isForce bool) func(error) error {
+	enabled := config.GetFallbackEnabled(cmd, t)
+	if enabled || isForce {
+		return func(err error) error {
+
+			if err.Error() == hystrix.ErrForceFallback.Error() || err.Error() == hystrix.ErrCircuitOpen.Error() ||
+				err.Error() == hystrix.ErrMaxConcurrency.Error() || err.Error() == hystrix.ErrTimeout.Error() {
+				// isolation happened, so lead to callback
+				lager.Logger.Errorf(err, fmt.Sprintf("fallback for %v", cmd))
+				resp := &invocation.InvocationResponse{}
+
+				if config.PolicyNull == config.GetPolicy(i.MicroServiceName, t) {
+					resp.Err = hystrix.FallbackNullError{Message: "return null"}
+				} else {
+					resp.Err = hystrix.CircuitError{Message: i.MicroServiceName + " is isolated because of error: " + err.Error()}
+					switch i.Reply.(type) {
+					case *rest.Response:
+						resp := i.Reply.(*rest.Response)
+						resp.SetStatusCode(http.StatusRequestTimeout)
+						//make sure body is empty
+						if resp.GetResponse().Body != nil {
+							resp.GetResponse().Body.Close()
+						}
+					}
+				}
+				cb(resp)
+				return nil //no need to return error
+			}
+			// call back success
+			return nil
+		}
+	}
+	return nil
+}
+
+// newBizKeeperConsumerHandler new bizkeeper consumer handler
+func newBizKeeperConsumerHandler() Handler {
+	return &BizKeeperConsumerHandler{}
+}
+
+// Name is for to represent the name of bizkeeper handler
+func (bk *BizKeeperConsumerHandler) Name() string {
+	return Name
+}
