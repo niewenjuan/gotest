@@ -26,9 +26,9 @@ cse:
 
   protocols:
     highway:
-      listenAddress: 127.0.0.1:2099
+      listenAddress: 0.0.0.0:2099
     rest:
-      listenAddress: 127.0.0.1:2098
+      listenAddress: 0.0.0.0:2098
 
 #  loadbalance:
 #    strategy:
