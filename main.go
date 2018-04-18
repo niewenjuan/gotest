@@ -17,7 +17,7 @@ import (
 	"encoding/json"
 	"crypto/tls"
 	"log"
-	"gotest/basicUtil"
+	"github.com/cairixian/gotest/basicUtil"
 	"strconv"
 	"os"
 )
