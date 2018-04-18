@@ -3,7 +3,7 @@ package highwayinvoke
 import (
 	"github.com/ServiceComb/go-chassis/server/restful"
 	"net/http"
-	p "gotest/basicUtil"
+	p "github.com/cairixian/gotest/basicUtil"
 	"strconv"
 	"github.com/ServiceComb/go-chassis/core/config"
 	"log"
