@@ -3,9 +3,9 @@
 #cse.credentials.secretKey: 7KdYbiOUfjCQR2xD9YVe8KRUmWNu2KSEahB86gqo
 
 #HC类生产-xj
-cse.credentials.accessKey: PSVOKOPL2B1ZPI320QGQ
-cse.credentials.secretKey: eCZBtQ0gAAIKREoOxXMBfN9h0obW5tBMVKDeV4aQ
-cse.credentials.project: southchina
+#cse.credentials.accessKey: PSVOKOPL2B1ZPI320QGQ
+#cse.credentials.secretKey: eCZBtQ0gAAIKREoOxXMBfN9h0obW5tBMVKDeV4aQ
+#cse.credentials.project: southchina
 
 #beta1
 #cse.credentials.accessKey: NQIZW3SSNRDLT0ZKZANS
