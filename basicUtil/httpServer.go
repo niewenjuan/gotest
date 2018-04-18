@@ -4,7 +4,7 @@ import (
 	"fmt"
 	"net/http"
 	//"encoding/json"
-	qy1 "gotest/schema/protoc"
+	qy1 "github.com/cairixian/gotest/schema/protoc"
 	"log"
 	//"github.com/tedsuo/rata"
 )
