@@ -1,10 +1,10 @@
 package schemaForClient
 
 import (
-	"gotest/schema/protoc"
+	"github.com/cairixian/gotest/schema/protoc"
 	"github.com/ServiceComb/go-chassis/server/restful"
 	"encoding/json"
-	q "gotest/basicUtil"
+	q "github.com/cairixian/gotest/basicUtil"
 	"net/http"
 
 	"time"
