@@ -2,8 +2,8 @@ package highwayinvoke
 
 import (
 	ctx "golang.org/x/net/context"
-	cse "gotest/schema/protoc"
-	basic "gotest/basicUtil"
+	cse "github.com/cairixian/gotest/schema/protoc"
+	basic "github.com/cairixian/gotest/basicUtil"
 	"github.com/ServiceComb/go-chassis/core/config"
 	"strconv"
 	"time"
