@@ -3,9 +3,9 @@ package main
 import (
 	"github.com/ServiceComb/go-chassis"
 	"github.com/ServiceComb/go-chassis/core/server"
-	"gotest/basicUtil"
-	qy "gotest/schema/protoc"
-	q "gotest/schema/schemaForClient"
+	"github.com/cairixian/gotest/basicUtil"
+	qy "github.com/cairixian/gotest/schema/protoc"
+	q "github.com/cairixian/gotest/schema/schemaForClient"
 	"log"
 	"net/http"
 	"strconv"
