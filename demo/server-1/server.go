@@ -2,8 +2,8 @@ package main
 
 import (
 	"github.com/ServiceComb/go-chassis"
-	"gotest/basicUtil"
-	p "gotest/schema"
+	"github.com/cairixian/gotest/basicUtil"
+	p "github.com/cairixian/gotest/schema"
 	"github.com/ServiceComb/go-chassis/core/server"
 	_ "github.com/ServiceComb/go-chassis/config-center"
 )
