@@ -12,8 +12,8 @@
 #cse.credentials.secretKey: Wn3QykqzsyD5osUFc2hFH6qozqOtV5FvetckJ7fr
 
 #HC生产
-#cse.credentials.accessKey: EDV0PE1TVESJ0Z9SFMV0
-#cse.credentials.secretKey: 82ldOxAc8keg3pbW7pXQbgSRLR5VO4RRBhxhbLKN
+cse.credentials.accessKey: EDV0PE1TVESJ0Z9SFMV0
+cse.credentials.secretKey: 82ldOxAc8keg3pbW7pXQbgSRLR5VO4RRBhxhbLKN
 
 #cse.credentials.project: southchina
 ## Cipher plugin name, used to decrypt sk when it is encrypted
