@@ -1,0 +1,40 @@
+#cse:
+#  isolation:
+#    Consumer:
+#      timeout:
+#        enabled: true
+#      timeoutInMilliseconds: 300
+#      maxConcurrentRequests: 10
+#      GoServerHoy:   # 服务级别
+#        timeout:
+#          enabled: false
+#        timeoutInMilliseconds: 300
+#        maxConcurrentRequests: 2
+
+#  circuitBreaker:
+#    Consumer: #全局
+#      enabled: true
+#      forceOpen: false
+#      forceClosed: true
+#      sleepWindowInMilliseconds: 5000
+#      requestVolumeThreshold: 20
+#      errorThresholdPercentage: 50
+#      GoServerHoy: # 服务级别
+#        enabled: false
+#        forceOpen: false
+#        forceClosed: false
+#        sleepWindowInMilliseconds: 10000
+#        requestVolumeThreshold: 20
+#        errorThresholdPercentage: 50
+
+  #容错处理函数，目前暂时按照开源的方式来不进行区分处理，统一调用fallback函数
+#  fallback:
+#    Consumer:
+#      enabled: false
+#      maxConcurrentRequests: 20
+#  fallbackpolicy:
+#   Consumer:
+#     policy: returnnull  #throwexception  returnnull
+
+
+

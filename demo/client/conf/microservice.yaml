@@ -1,0 +1,5 @@
+#APPLICATION_ID: go
+service_description:
+  name: ClientHoy
+  version: 1.0.0
+  level: FRONT
