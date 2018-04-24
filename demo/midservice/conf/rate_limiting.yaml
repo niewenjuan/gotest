@@ -1,9 +1,0 @@
-#cse:
-#  flowcontrol:
-#    Provider: # for consumer
-#      qps:
-#        enabled: false  # enable rate limiting or not
-#        limit:
-#          GoServerHoy: 1  # rate limit for request to a provider,it represents 100 request per second
-#        global:
-#          limit: 1
