@@ -4,9 +4,13 @@
 #cse.credentials.secretKey: 7KdYbiOUfjCQR2xD9YVe8KRUmWNu2KSEahB86gqo #NQIZW3SSNRDLT0ZKZANS
 
 #HC类生产-xj
-cse.credentials.accessKey: PSVOKOPL2B1ZPI320QGQ
-cse.credentials.secretKey: eCZBtQ0gAAIKREoOxXMBfN9h0obW5tBMVKDeV4aQ
-cse.credentials.project: southchina_01
+#cse.credentials.accessKey: PSVOKOPL2B1ZPI320QGQ
+#cse.credentials.secretKey: eCZBtQ0gAAIKREoOxXMBfN9h0obW5tBMVKDeV4aQ
+#cse.credentials.project: southchina_01
+
+#香港生产环境
+cse.credentials.accessKey: WLJAQBNU2JZSX13NQ7N5
+cse.credentials.secretKey: 94C1oQUnDeDFTDKb4BOKZtf5peytmS4amnRaMA6t
 
 ##HK region
 #cse.credentials.accessKey: BCEMYGYBKGWSUZLUJOPQ
