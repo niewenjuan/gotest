@@ -17,9 +17,13 @@
 #cse.credentials.secretKey: Wn3QykqzsyD5osUFc2hFH6qozqOtV5FvetckJ7fr
 
 #HC生产
-cse.credentials.accessKey: EDV0PE1TVESJ0Z9SFMV0
-cse.credentials.secretKey: 82ldOxAc8keg3pbW7pXQbgSRLR5VO4RRBhxhbLKN
+#cse.credentials.accessKey: EDV0PE1TVESJ0Z9SFMV0
+#cse.credentials.secretKey: 82ldOxAc8keg3pbW7pXQbgSRLR5VO4RRBhxhbLKN
 
 #cse.credentials.project: southchina
 ## Cipher plugin name, used to decrypt sk when it is encrypted
 #cse.credentials.akskCustomCipher: default
+
+#香港生产环境
+cse.credentials.accessKey: WLJAQBNU2JZSX13NQ7N5
+cse.credentials.secretKey: 94C1oQUnDeDFTDKb4BOKZtf5peytmS4amnRaMA6t
