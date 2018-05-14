@@ -3,7 +3,7 @@ cse:
   service:
     registry:
       disabled: false
-      address: https://cse.ap-southeast-1.myhuaweicloud.com:443 #https://cse.cn-north-1.myhuaweicloud.com:443 #http://127.0.0.1:30100 #https://cse.cn-north-1.myhwclouds.com:443 # If type is File then address will be the path of the file
+      address: https://cse.cn-north-1.myhuaweicloud.com:443 #https://cse.cn-north-1.myhuaweicloud.com:443 #http://127.0.0.1:30100 #https://cse.cn-north-1.myhwclouds.com:443 # If type is File then address will be the path of the file
 #      address: https://cse.cn-hk1.myhwclouds.com:443
       scope: full #set full to be able to discover other app's service
       autodiscovery: false
@@ -15,7 +15,7 @@ cse:
   config:
     client:
 #      serverUri: https://cse.cn-north-1.myhuaweicloud.com:443 #uri of config center
-      serverUri: https://cse.ap-southeast-1.myhuaweicloud.com:443 #https://cse.cn-north-1.myhuaweicloud.com:443
+      serverUri: https://cse.cn-north-1.myhuaweicloud.com:443 #https://cse.cn-north-1.myhuaweicloud.com:443
       refreshPort: 30104
       refreshMode: 1 # 1: only pull config. 2: watch config change events
       refreshInterval: 1 # unit is second
@@ -24,7 +24,7 @@ cse:
   monitor:
     client:
 #      serverUri: https://128.118.29.157:30109
-      serverUri: https://cse.ap-southeast-1.myhuaweicloud.com:443 #https://cse.cn-north-1.myhuaweicloud.com:443
+      serverUri: https://cse.cn-north-1.myhuaweicloud.com:443 #https://cse.cn-north-1.myhuaweicloud.com:443
 #      serverUri: https://cse.cn-north-1.myhuaweicloud.com:443
       enable: true
 
