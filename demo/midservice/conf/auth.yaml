@@ -22,9 +22,8 @@ cse.credentials.secretKey: 94C1oQUnDeDFTDKb4BOKZtf5peytmS4amnRaMA6t
 #cse.credentials.secretKey: Wn3QykqzsyD5osUFc2hFH6qozqOtV5FvetckJ7fr
 
 #HC生产
-#cse.credentials.accessKey: EDV0PE1TVESJ0Z9SFMV0
-#cse.credentials.secretKey: 82ldOxAc8keg3pbW7pXQbgSRLR5VO4RRBhxhbLKN
-#cse.credentials.project: southchina
+cse.credentials.accessKey: AONYCAOM6ZA0WGN532SE
+cse.credentials.secretKey: CL6FFLnHKona7gvbEzCx7baSDcP3UbePljhg5Pdh
 
 #cse.credentials.accessKey: AONYCAOM6ZA0WGN532SE # Ak
 #cse.credentials.secretKey: CL6FFLnHKona7gvbEzCx7baSDcP3UbePljhg5Pdh # Sk
