@@ -9,8 +9,8 @@
 #cse.credentials.project: southchina_01
 
 #香港生产环境
-cse.credentials.accessKey: WLJAQBNU2JZSX13NQ7N5
-cse.credentials.secretKey: 94C1oQUnDeDFTDKb4BOKZtf5peytmS4amnRaMA6t
+#cse.credentials.accessKey: WLJAQBNU2JZSX13NQ7N5
+#cse.credentials.secretKey: 94C1oQUnDeDFTDKb4BOKZtf5peytmS4amnRaMA6t
 
 #HK region
 #cse.credentials.accessKey: BCEMYGYBKGWSUZLUJOPQ
