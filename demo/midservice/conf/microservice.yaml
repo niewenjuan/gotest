@@ -1,9 +1,0 @@
-APPLICATION_ID: go
-service_description:
-  name: GoMidServer
-  version: 1.1.0
-  level: FRONT #或MIDDLE或BACK
-  properties: {
-        flag : CrossApp ,
-        delay : 1000
-      }

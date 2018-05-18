@@ -1,9 +1,0 @@
-#APPLICATION_ID: go
-service_description:
-  name: GoServerHoy
-  version: 1.0.0
-  level: FRONT #或MIDDLE或BACK
-  properties: {
-    flag : c ,
-    delay : 1000
-  }
